@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/cadastroPaciente.css">
+    <script type="text/javascript" src="../scripts/verificarFormulario.js"></script>
+    <title>Cadastre-se</title>
+</head>
+<body>
+
+    <section class="form">
+        <div class="caixaRegistro">
+           <h2 class="titulo">Registre-se aqui!</h2>
+           <div class="formulario"></div>
+               <form method="POST" action="../php/dadosRegistro.php" name="form" onsubmit="return checandoInput(this)">
+                    <input class="primeiraLinha" type="text" name="nome" placeholder="Nome" required="true" autocomplete="off" maxlength="40">
+                    <input class="primeiraLinha" type="date" name="data" placeholder="Data de nascimento" autocomplete="off" required="true">
+                    <input class="segundaLinha" type="number" name="cpf" placeholder="CPF" autocomplete="off" required="true">
+                    <input class="segundaLinha" type="number" name="carteirinha" placeholder="Carteirinha" autocomplete="off" required="true">
+                    <select class="terceiraLinha" type="text" name="sexo" placeholder="Sexo" autocomplete="off" required="true">
+                        <option value="">SEXO</option>
+                        <option value="M">MULHER</option>
+                        <option value="H">HOMEM</option>
+                        <option value="O">OUTROS</option>
+                    </select>
+                    <input class="terceiraLinha" type="password" name="senha" placeholder="SENHA" autocomplete="off" required="true" maxlength="32">
+                    <input class="botao" type="submit">
+                    
+               </form>
+               <h2 class="tituloBaixo">Já está cadastrado?<a class="cadastrado" href="">Clique aqui!</a></h2>
+           </div>
+           
+    </section>
+    
+<script>
+    function checandoInput(obejto) {
+        if(obejto.cpf.value.lenght != 11){
+            alert("O campo CPF deve haver 11 dígitos!")
+            obejto.cpf.focus();
+            return false;
+        }
+        if(obejto.carteirinha.value.lenght != 11){
+            alert("O campo CARTEIRINHA deve haver 11 dígitos!")
+            obejto.carteirinha.focus();
+            return false;
+        }
+    }
+</script>
+
+</body>
+</html>
