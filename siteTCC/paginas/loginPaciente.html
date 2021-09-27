@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/loginPaciente.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <title>Faça o Login</title>
+</head>
+
+<body>
+    <section class="form">
+        <div class="caixaRegistro">
+            <h2 class="titulo">Faça o login aqui!</h2>
+            <div class="formulario"></div>
+            <form method="POST" action="../php/dadosLogin.php" name="form">
+                <input class="primeiraLinha" type="text" name="cpf" placeholder="CPF" required="true"
+                    autocomplete="off" maxlength="40">
+                <input class="primeiraLinha" id="senha" type="password" name="senha" placeholder="Senha"
+                    autocomplete="off" required="true">
+                <div class="" id="esconder_senha">
+                    <span class="hide" id="mostrar" onclick="esconderSenha()">
+                        <i class="uil uil-eye"></i>
+                    </span>
+                </div>
+                <input class="botao" type="submit">
+
+            </form>
+            <h2 class="tituloBaixo">Ainda não cadastrado?<a class="cadastrado" href="cadastroPaciente.html">Clique
+                    aqui!</a></h2>
+        </div>
+    </section>
+    <script>
+        const senha = document.getElementById('senha');
+        const esconder = document.getElementById('mostrar');
+        function esconderSenha() {
+            if (senha.type === 'password') {
+                senha.setAttribute('type', 'text');
+                esconder.classList.add('esconder');
+                esconder.style.color = "#002478";
+            }
+            else {
+                senha.setAttribute('type', 'password');
+                esconder.classList.remove('esconder');
+                esconder.style.color = "#000";
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+:root{
+	--cor-principal: #002478;
+	--cor-secundaria: #01778F;
+	--cor-teciaria: #0070A8;
+	--cor-background: #f0f1f2;
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	scroll-behavior: smooth;
+}
+/* ================ Cabeçalho ================ */
+header{	
+	width: 100%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	background-color: var(--cor-background);
+	transition: 0.6s;
+	padding: 40px 100px;
+	justify-content: space-between;
+	align-items: center;
+	padding: 40px 100px;
+	width: 100%;
+
+}
+
+header .logo{
+	position: relative;
+	font-weight: 700;
+	text-decoration: none;
+	font-size: 2em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	transition: 0.6s;
+	color: var(--cor-principal);
+}
+header ul{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+header ul li{
+	position: relative;
+	list-style: none;
+}
+header ul li a{
+	position: relative;
+	margin: 0 15px;
+	text-decoration: none;
+	letter-spacing: 2px;
+	font-size: 20px;
+	font-weight: 700;
+	transition: 0.6s;
+	color: var(--cor-principal);
+}
+
+header ul li a i{
+	position: relative;
+	margin: 0 15px;
+	font-size: 25px;
+}
+/* ================ Home ================ */
+section .home{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.noticia{
+	position: relative;
+}
+.noticia .noticia_home{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	color: var(--cor-principal);
+	font-size: 50px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.noticia .texto_noticia{
+	font-size: 20px;
+	font-weight: 900;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+.noticia .saiba_mais{
+	color: var(--cor-principal);
+	cursor: pointer;
+}
+.noticia .saiba_mais:hover{
+	color: #0070A8;
+}
+
+/* ================ Medicos ================ */
+section .medicos{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+section .conteudo_medicos{
+	position: relative;
+}
+.medicos_home{
+	margin-top: 600px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--cor-principal);
+	font-size: 50px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.alinhar-card{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+.medicos_card{
+	margin: 5px;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	width: 300px;
+	height: 380px;
+	background: #fff;
+	border-radius: 5px;
+	box-shadow: 0 1px 5px 1px rgba(0,0,0,.3 );
+}
+.top{
+	height: 120px;
+	border-radius: 6px;
+	background-color: var(--cor-principal);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.imagem{
+	background-color: #fff;
+	width: 100px;
+	height: 100px;
+	padding: 5px;
+	border-radius: 50%;
+}
+.imagem_card{
+	background-color: #fff;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}
+.bottom{
+	background-color: #fff;
+	padding: 20px;
+	padding-top: 60px;
+	text-align: center;
+}
+.bottom h3{
+	font-size: 1.8rem;
+}
+.bottom h4{
+	font-size: 1.2rem;
+	color: var(--cor-principal);
+}
+.bottom p{
+	color: #222222;
+	margin-bottom: 20px;
+}
+.bottom .botao{
+	background: none;
+	padding: 14px 30px;
+	color: var(--cor-principal);
+	text-decoration: none;
+	font-size: 0.9rem;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+/* ================ Horarios ================ */
+section .horarios{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+section .marcar_horarios{
+		
+}
