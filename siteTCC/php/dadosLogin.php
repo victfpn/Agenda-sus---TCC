@@ -20,6 +20,7 @@ if($linhas > 0 ){
     // Transformando o retorno em um array de linhas
     $array= mysqli_fetch_assoc($return);
     do{
+        $_SESSION['nome_paciente']= $array['Nome_Paciente'];
         $_SESSION['id_paciente']= $array['ID_Paciente'];
     }while($array=mysqli_fetch_assoc($return));
 }else{
