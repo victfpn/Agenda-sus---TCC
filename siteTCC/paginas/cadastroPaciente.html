@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,20 +13,20 @@
         <div class="caixaRegistro">
            <h2 class="titulo">Registre-se aqui!</h2>
            <div class="formulario"></div>
-               <form method="POST" action="../php/dadosCadastro.php" name="form">
-                    <input class="primeiraLinha" type="text" name="nome" placeholder="Nome" required="true" autocomplete="off" maxlength="40">
+               <form method="POST" action="../php/cadastro/dadosCadastro.php" name="form">
+                    <input class="primeiraLinha" type="text" name="nome" placeholder="Nome" pattern="[a-zA-Z ]+" required="true" autocomplete="off" maxlength="255">
                     <input class="primeiraLinha" type="date" name="data" placeholder="Data de nascimento" autocomplete="off" required="true">
-                    <input class="segundaLinha" type="text" name="cpf" placeholder="CPF" autocomplete="off" required="true" maxlength="11">
-                    <input class="segundaLinha" type="text" name="carteirinha" placeholder="Carteirinha (Se tiver)" autocomplete="off" maxlength="15">
+                    <input class="segundaLinha" type="text" name="cpf" placeholder="CPF" pattern="[0-9]+" autocomplete="off" required="true" minlength="11" maxlength="11">
+                    <input class="segundaLinha" type="text" name="carteirinha" pattern="[0-9]+" placeholder="Carteirinha (Opcional)" autocomplete="off" maxlength="15">
                     <select class="terceiraLinha" type="text" name="sexo" placeholder="Sexo" autocomplete="off" required="true">
                         <option value="">SEXO</option>
                         <option value="M">MULHER</option>
                         <option value="H">HOMEM</option>
-                        <option value="O">OUTROS</option>
+                        <option value="H">OUTROS</option>
                     </select>
-                    <input class="terceiraLinha" type="password" name="senha" placeholder="Senha" autocomplete="off" required="true" maxlength="32">
+                    <input class="terceiraLinha" type="password" name="senha" pattern="[0-9a-zA-Z]+" placeholder="Senha" autocomplete="off" required="true" minlength="8" maxlength="32">
                     <input type="email" class="quartaLinha" name="email" placeholder="Email" autocomplete="off" required="true" maxlength="64">
-                    <input type="text" class="quintaLinha" name="telefone" placeholder="Telefone" autocomplete="off" required="true">
+                    <input type="text" class="quintaLinha" name="telefone" pattern="[0-9]+" placeholder="Telefone" autocomplete="off" required="true" minlength="11" maxlength="11">
                     <input class="botao" type="submit">
                     
                </form>

@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+	padding: 0;
+	margin: 0;
+	font-family: 'Poppins', sans-serif;
+}
+
+body{
+	background-color: #f0f1f2;
+}
+section{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	padding: 20px;
+	min-height: 80vh;
+}
+.caixaRegistro{
+	position: relative;
+	width: 700px;
+	min-width: 100px;
+	border-radius: 15px;
+	background-color: #002478;
+	padding: 20px 30px;
+	
+	
+}
+.titulo{
+	display: flex;
+	justify-content: center;
+	font-size: 40px;
+	color: #fff;
+	margin-bottom: 20px;
+}
+
+input:hover{
+	cursor: pointer;
+}
+input[type="text"]{
+	border-radius: 15px;
+}
+input[type="date"]{
+	border-radius: 15px;
+}
+input[type="password"]{
+	border-radius: 15px;
+}
+input[type="email"]{
+	border-radius: 15px;
+}
+select{
+	border-radius: 15px;
+}
+
+select:hover{
+	cursor: pointer;
+}
+
+form{
+	padding: 10px;
+}
+input{
+	border: none;
+	font-size: 18px;
+}
+select{
+	border: none;
+	font-size: 18px;
+}
+
+.primeiraLinha{
+	width: 49%;
+	height: 50px;
+	text-align: center;
+	
+}
+.segundaLinha{
+	margin-top: 20px;
+	width: 49%;
+	height: 50px;
+	text-align: center;
+}
+.terceiraLinha{
+	margin-top: 20px;
+	width:100%;
+	height: 50px;
+	text-align: center;
+}
+.quartaLinha{
+	margin-top: 20px;
+	width: 100%;
+	height: 50px;
+	text-align: center;
+}
+.quintaLinha{
+	margin-top: 20px;
+	width: 100%;
+	height: 50px;
+	text-align: center;
+}
+input[type="submit"]{
+	margin-top: 10px;
+	width: 20%;
+	height: 50px;
+	border-radius: 4%;
+	background: #0070A8;
+	color: #fff;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	transition: 0.5s;
+}
+
+.tituloBaixo{
+	display: flex;
+	color: #fff;
+	justify-content: center;
+	align-items: center;
+	font-size: 18px;
+}
+.cadastrado{
+	margin-left: 5px;
+	text-decoration: none;
+	color: #01778F;
+}

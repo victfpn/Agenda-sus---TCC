@@ -60,7 +60,7 @@ select{
 span{
 	position: absolute;
 	right: 10%;
-	top: 46%;
+	top: 54%;
 	transform: translate(0,-50%);
 	cursor: pointer;
 }

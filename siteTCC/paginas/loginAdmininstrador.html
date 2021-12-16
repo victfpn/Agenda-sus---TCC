@@ -5,19 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../css/loginPaciente.css">
+    <link rel="stylesheet" type="text/css" href="../css/loginAdmininstrador.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <title>Faça o Login</title>
 </head>
 
 <body>
+    
     <section class="form">
         <div class="caixaRegistro">
             <h2 class="titulo">Faça o login aqui!</h2>
             <div class="formulario"></div>
-            <form method="POST" action="../php/cadastro/dadosLogin.php" name="form">
-                <input class="primeiraLinha" type="text" name="cpfEmail" placeholder="CPF/Email" required="true"
-                    autocomplete="off" minlength="11" maxlength="40">
+            <form method="POST" action="../php/cadastro/dadosLoginAtendente.php" name="form">
+                <input class="primeiraLinha" type="text" name="id" placeholder="ID" required="true"
+                    autocomplete="off" maxlength="40">
                 <input class="primeiraLinha" id="senha" type="password" name="senha" pattern="[a-zA-Z0-9]+" placeholder="Senha"
                     autocomplete="off" required="true" minlength="8" maxlength="32">
                 <div class="" id="esconder_senha">
@@ -28,10 +29,6 @@
                 <input class="botao" type="submit">
 
             </form>
-            <h2 class="tituloBaixo">Ainda não cadastrado?<a class="cadastrado" href="cadastroPaciente.html">Clique
-                    aqui!</a></h2>
-                    <h2 class="tituloBaixo">Logar como admininstrador:<a class="cadastrado" href="loginAdmininstrador.html">Clique
-                        aqui!</a></h2>
         </div>
     </section>
     <script>

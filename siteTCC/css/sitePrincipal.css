@@ -6,188 +6,118 @@
 	--cor-teciaria: #0070A8;
 	--cor-background: #f0f1f2;
 }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 *{
-	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
+	margin: 0;
 	font-family: 'Poppins', sans-serif;
-	scroll-behavior: smooth;
 }
-/* ================ Cabeçalho ================ */
-header{	
-	width: 100%;
-	position: relative;
+
+header nav{
 	display: flex;
+	justify-content: space-around;
 	align-items: center;
-	background-color: var(--cor-background);
-	transition: 0.6s;
-	padding: 40px 100px;
-	justify-content: space-between;
-	align-items: center;
-	padding: 40px 100px;
-	width: 100%;
-
+	height: 8vh;
 }
-
-header .logo{
-	position: relative;
-	font-weight: 700;
+header nav .logo{
+	color: #fff;
+	font-size: 45px;
+	letter-spacing: 4px;
 	text-decoration: none;
-	font-size: 2em;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	transition: 0.6s;
-	color: var(--cor-principal);
+	font-weight: 600;
 }
-header ul{
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-header ul li{
-	position: relative;
-	list-style: none;
-}
-header ul li a{
-	position: relative;
-	margin: 0 15px;
-	text-decoration: none;
-	letter-spacing: 2px;
-	font-size: 20px;
-	font-weight: 700;
-	transition: 0.6s;
+header nav .logo:hover{
 	color: var(--cor-principal);
 }
 
-header ul li a i{
-	position: relative;
-	margin: 0 15px;
-	font-size: 25px;
+header nav ul li a{
+	color: #fff;
+	font-size: 15px;
+	letter-spacing: 4px;
+	font-weight: 500;
+	text-decoration: none;
 }
-/* ================ Home ================ */
-section .home{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.noticia{
-	position: relative;
-}
-.noticia .noticia_home{
-	position: relative;
-	display: flex;
-	justify-content: center;
-	color: var(--cor-principal);
-	font-size: 50px;
-	font-weight: 700;
-	text-transform: uppercase;
-}
-.noticia .texto_noticia{
-	font-size: 20px;
+header nav ul li a:hover{
 	font-weight: 900;
+}
+header nav ul{
+	list-style: none;
 	display: flex;
-	justify-content: center;
-	margin-bottom: 20px;
 }
-.noticia .saiba_mais{
-	color: var(--cor-principal);
-	cursor: pointer;
+header nav ul li{
+	letter-spacing: 3px;
+	margin-left: 32px;
 }
-.noticia .saiba_mais:hover{
-	color: #0070A8;
+main{
+	background-color: #303F9F;
+	background-size: cover;
+	height: 55vh;
 }
-
-/* ================ Medicos ================ */
-section .medicos{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-section .conteudo_medicos{
-	position: relative;
-}
-.medicos_home{
-	margin-top: 600px;
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: var(--cor-principal);
-	font-size: 50px;
-	font-weight: 700;
-	text-transform: uppercase;
-}
-.alinhar-card{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-}
-.medicos_card{
-	margin: 5px;
-	display: flex;
-	flex-direction: column;
-	position: relative;
-	width: 300px;
-	height: 380px;
-	background: #fff;
-	border-radius: 5px;
-	box-shadow: 0 1px 5px 1px rgba(0,0,0,.3 );
-}
-.top{
-	height: 120px;
-	border-radius: 6px;
-	background-color: var(--cor-principal);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.imagem{
-	background-color: #fff;
-	width: 100px;
-	height: 100px;
-	padding: 5px;
-	border-radius: 50%;
-}
-.imagem_card{
-	background-color: #fff;
-	width: 100px;
-	height: 100px;
-	border-radius: 50%;
-}
-.bottom{
-	background-color: #fff;
-	padding: 20px;
-	padding-top: 60px;
+.texto_meio{
+	margin-top: 150px;
 	text-align: center;
 }
-.bottom h3{
-	font-size: 1.8rem;
+.texto_principal{
+	color: #fff;
+	font-size: 70px;
+	font-weight: 700;
 }
-.bottom h4{
-	font-size: 1.2rem;
-	color: var(--cor-principal);
+.texto_secundario{
+	color: #fff;
+	font-size: 30px;
+	font-weight: 600;
 }
-.bottom p{
-	color: #222222;
-	margin-bottom: 20px;
+.saiba_mais{
+	text-align: center;
+	margin-top: 30px;
 }
-.bottom .botao{
-	background: none;
-	padding: 14px 30px;
-	color: var(--cor-principal);
+.botao_meio{
+	background-color: white;
+	border: 2px solid #0070A8;;
+	padding: 15px 32px;
+	text-align: center;
+	display: inline-block;
+	color: #0070A8;	
 	text-decoration: none;
-	font-size: 0.9rem;
-	text-transform: uppercase;
-	font-weight: bold;
+	font-size: 20px;
+	font-weight: 500;
 }
-/* ================ Horarios ================ */
-section .horarios{
+.botao_meio:hover{
+	font-weight: 900;
+	border: 3px solid #0070A8;
+
+}
+.texto_final{
+	margin-top: 50px;
+	text-align: center;
+}
+.texto_principal_final{
+	color: #222;
+	font-size: 40px;
+	font-weight: 700;
+}
+.texto_secundario_final{
+	color: rgb(107, 107, 107);
+	font-size: 20px;
+	font-weight: 600;
+}
+footer{
+    position:fixed;
+    bottom:0;
+    width:100%;
+}
+.rodape{
+	background-color: #303F9F;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	justify-content: space-around;
 }
-section .marcar_horarios{
-		
+ion-icon{
+	font-size: 50px;
+	color: #fff;
+}
+.perfil{
+	color: #fff;
+}
+.logout ion-icon:hover{
+	color: var(--cor-principal);
 }

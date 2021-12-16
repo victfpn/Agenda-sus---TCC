@@ -1,7 +1,9 @@
 <?php
-if(isset($_SESSION['nome_paciente'])){
-    unset($_SESSION['nome_paciente']);
-}
-echo ("<script> alert('Logoff realizado com sucesso'); </script>");
-echo("<script>window.location.href = '../paginas/loginPaciente.html';</script>");
+
+session_start();
+session_unset();
+session_destroy();
+
+echo "<p>Saida efetuada com sucesso</p>";
+echo '<p>Clique <a href="../paginas/loginPaciente.html">AQUI</a> para retornar ao inicio.</p></strong>';
 ?>
