@@ -22,7 +22,7 @@ $return=mysqli_query($connection, $query) or die ('Não foi possivel inserir os 
 	<title>Alterando Dados</title>
 	<script type="text/javascript">
 		alert("Dados alterados com sucesso!");
-		window.location.href = "../../paginas/sitePrincipal.php"
+		window.location.href = "../../paginas/index.php"
 	</script>
 </head>
 <body>

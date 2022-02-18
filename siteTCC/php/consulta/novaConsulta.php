@@ -4,7 +4,7 @@ session_start();
 if(isset($_SESSION['id_atendente'])){
 }else{
     echo ("<script> alert('Entre com uma conta admininstrativa!'); </script>");
-    echo("<script>window.location.href = '../paginas/sitePrincipal.php';</script>");
+    echo("<script>window.location.href = '../paginas/index.php';</script>");
 }
 ?>
 

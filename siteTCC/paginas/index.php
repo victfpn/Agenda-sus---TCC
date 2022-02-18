@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/sitePrincipal.css">
+    <link rel="stylesheet" href="../css/index.css">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <title>Marcar Consulta</title>
@@ -31,7 +30,8 @@ session_start();
             if(isset($_SESSION['nome_atendente'])){
                 echo '<ul>
                 <li><a href="../php/consulta/novaConsulta.php">Cadastrar consulta</a></li>
-                <li><a href="../php/cadastro/cadastrarMedico.php">Cadastrar medico</a></li>              
+                <li><a href="../php/cadastro/cadastrarMedico.php">Cadastrar medico</a></li>
+                <li><a href="../php/cadastro/cadastrarAtendente.php">Cadastrar atendente</a></li>              
             </ul>';
             }
             ?>
@@ -48,17 +48,16 @@ session_start();
     </main>
     <div class="texto_final">
         <h2 class="texto_principal_final">Vantagem do SUS</h2>
-        
-        
         <p class="texto_secundario_final">Desde consultas, procedimento ambulatorial, aplicação de vacina e até transplante de órgãos, o SUS beneficia cerca de 180 milhões de brasileiros, somando mais de 2,8 bilhões de atendimentos por ano. Segundo dados do Instituto Brasileiro de Geografia e Estatística (IBGE), em 2019, mais de 70% da população era dependente do sistema – número que pode ter aumentado com a pandemia.</p>
+
     </div>
    <footer>
        <div class="rodape">
         <h1 class="perfil">
             <?php
                 if(isset($_SESSION['nome_paciente'])){
-                    $paciente = $_SESSION['nome_paciente'];
-                    $query = "SELECT * from paciente WHERE Nome_Paciente = '$paciente'";
+                    $paciente = $_SESSION['id_paciente'];
+                    $query = "SELECT * from paciente WHERE ID_Paciente = '$paciente'";
                     mysqli_set_charset($connection,"utf-8");
                     if($result=mysqli_query($connection,$query)){
                         while($dados = mysqli_fetch_assoc($result)){
@@ -69,8 +68,8 @@ session_start();
                     echo' '.$nomePaciente.' ';
                 }
                 if(isset($_SESSION['nome_atendente'])){
-                    $atendente = $_SESSION['nome_atendente'];
-                    $query = "SELECT * from atendentes WHERE Nome_Atendente = '$atendente'";
+                    $atendente = $_SESSION['id_atendente'];
+                    $query = "SELECT * from atendentes WHERE ID_Atendente = '$atendente'";
                     mysqli_set_charset($connection,"utf-8");
                     if($result=mysqli_query($connection,$query)){
                         while($dados = mysqli_fetch_assoc($result)){

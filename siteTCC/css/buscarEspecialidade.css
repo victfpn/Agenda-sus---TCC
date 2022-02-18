@@ -54,34 +54,10 @@ select{
 }
 
 .primeiraLinha{
-	width: 49%;
+	width: 100%;
 	height: 50px;
 	text-align: center;
 	
-}
-.segundaLinha{
-	margin-top: 20px;
-	width: 49%;
-	height: 50px;
-	text-align: center;
-}
-.terceiraLinha{
-	margin-top: 20px;
-	width:49%;
-	height: 50px;
-	text-align: center;
-}
-.quartaLinha{
-	margin-top: 20px;
-	width: 100%;
-	height: 50px;
-	text-align: center;
-}
-.quintaLinha{
-	margin-top: 20px;
-	width: 100%;
-	height: 50px;
-	text-align: center;
 }
 input[type="submit"]{
 	margin-top: 10px;

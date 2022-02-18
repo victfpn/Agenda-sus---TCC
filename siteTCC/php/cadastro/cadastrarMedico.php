@@ -4,7 +4,7 @@ session_start();
 if(isset($_SESSION['id_atendente'])){
 }else{
     echo ("<script> alert('Entre com uma conta admininstrativa!'); </script>");
-    echo("<script>window.location.href = '../paginas/sitePrincipal.php';</script>");
+    echo("<script>window.location.href = '../paginas/index.php';</script>");
 }
 ?>
 
@@ -16,7 +16,7 @@ if(isset($_SESSION['id_atendente'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/cadastrarMedico.css">
-    <title>Marcar Médico</title>
+    <title>Cadastrar Médico</title>
 </head>
 <body>
     <section class="form">

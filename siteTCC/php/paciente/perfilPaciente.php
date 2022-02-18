@@ -2,7 +2,8 @@
 include("../conexao/conexaoBanco.php");
 session_start();
 
-$query = "SELECT Nome_Paciente, CPF_Paciente, Email_Paciente,Data_Paciente, Carteirinha_Paciente, Telefone_Paciente FROM paciente";
+$paciente = $_SESSION['id_paciente'];
+$query = "SELECT Nome_Paciente, CPF_Paciente, Email_Paciente,Data_Paciente, Carteirinha_Paciente, Telefone_Paciente FROM paciente WHERE ID_Paciente = '$paciente' ";
 $return=mysqli_query($connection, $query) or die ('Não foi possivel se conectar com o banco');
 $linhas = mysqli_num_rows($return);
 if($linhas > 0 ){

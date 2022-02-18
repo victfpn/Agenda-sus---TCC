@@ -22,7 +22,7 @@ $return2=mysqli_query($connection, $query2) or die ('Não foi possivel inserir o
 	<title>Fazendo login</title>
 	<script type="text/javascript">
 		alert("Medico cadastrado com sucesso!");
-		window.location.href = "../../paginas/sitePrincipal.php"
+		window.location.href = "../../paginas/index.php"
 	</script>
 </head>
 <body>

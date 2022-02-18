@@ -38,7 +38,7 @@ if($linhas > 0 ){
 <body>
     <script type="text/javascript">
         alert('Login realizado com sucesso!');
-        window.location.href = '../../paginas/sitePrincipal.php';
+        window.location.href = '../../paginas/index.php';
     </script>
 </body>
 </html>

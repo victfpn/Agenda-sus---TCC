@@ -14,7 +14,7 @@ session_start();
 <body>
     <section class="form">
         <div class="caixaRegistro">
-           <h2 class="titulo">Especialidade e data</h2>
+           <h2 class="titulo">Especialidade</h2>
             <div class="formulario"></div>
                 <form method="POST" class="formularioConsulta" action="./buscarvaga.php" name="form" >
                     <select class="primeiraLinha" name="selectConsulta">
@@ -31,7 +31,6 @@ session_start();
                         }
                         ?>
                     </select>
-                    <input type="date" class="primeiraLinha" name="dataConsulta" required>
                     <input class="botao" type="submit">
                 </form>
         </div>

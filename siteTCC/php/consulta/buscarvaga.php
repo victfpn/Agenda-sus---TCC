@@ -12,17 +12,19 @@
         include("../conexao/conexaoBanco.php");
         session_start();  
     ?>
-    <section class="form">
-        <div class="caixaRegistro">
-            <h2 class="titulo">Escolha a consulta</h2>
-            <div class="formulario"></div>
-            <form action="../cadastro/clienteConsulta.php" name="clienteConsulta" method="POST">
-                <select class="primeiraLinha" name="valorCodigo">
-                <?php
+    <section class="tabela">
+            <div class="table-principal">
+                <table class="table">
+                    <tr class="principal-row">
+                        <th >Médico</th>
+                        <th >Dia</th>
+                        <th >Hora</th>
+                        <th class="th-right">Marcar</th>
+                    </tr>
+                    <?php
                     $codigoEspec=$_POST["selectConsulta"]; 
-                    $dataConsulta=$_POST["dataConsulta"];
                     $query = "SELECT c.codigo, m.nome, c.data as datamarcada, c.hora as horamarcada, c.status
-                    FROM medicos m, consultas c WHERE c.medico = m.matricula and c.espec = $codigoEspec and c.status = 0"; 
+                    FROM medicos m, consultas c WHERE c.medico = m.matricula and c.espec = $codigoEspec and c.status = 0 ORDER BY datamarcada"; 
                     $result=mysqli_query($connection,$query);   
 	                $registros=mysqli_num_rows($result);    
 	                if ($registros !=0){
@@ -32,18 +34,15 @@
 			            $ahora=$dados['horamarcada'];
 			            $adata=$dados['datamarcada'];
                         $codigo=$dados['codigo'];
-                            if($dataConsulta == $adata){
-                                echo '<option value="' .$codigo,'">'.$adata.' - às '.$ahora.' - Médico: Dr(a): '.$nome.' </option>';
-                                echo '<input class="botao" type="submit">';
-                            }
-		                }   
+
+                            echo '<tr><td>'.$nome.'</td><td>'.$adata.'</td><td>'.$ahora.'</td><td class="td-right"><a href="../cadastro/clienteConsulta.php?codigo='.$codigo.'">Marcar</a></td></tr>';
+		                }
+  
 	                }else { echo '<option> Não há vagas disponiveis para esse horario </option>';}
                     
                 ?>
-                </select>
-                
-            </form>
-        </div>
+                </table>
+            </div>
     </section>
 
 

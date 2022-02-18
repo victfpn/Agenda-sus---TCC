@@ -22,7 +22,7 @@ $return=mysqli_query($connection, $query) or die ('Não foi possivel inserir os 
 <body>
     <script type="text/javascript">
         alert('Horario marcado com sucesso!');
-        window.location.href = '../../paginas/sitePrincipal.php';
+        window.location.href = '../../paginas/index.php';
     </script>
 </body>
 </html>

@@ -13,25 +13,7 @@ section{
 	justify-content: center;
 	align-items: center;
 	position: relative;
-	padding: 20px;
 	min-height: 100vh;
-}
-.caixaRegistro{
-	position: relative;
-	width: 700px;
-	min-width: 100px;
-	border-radius: 15px;
-	background-color: #002478;
-	padding: 20px 30px;
-	
-	
-}
-.titulo{
-	display: flex;
-	justify-content: center;
-	font-size: 40px;
-	color: #fff;
-	margin-bottom: 20px;
 }
 
 input:hover{
@@ -41,7 +23,7 @@ select:hover{
 	cursor: pointer;
 }
 
-form{
+tabela{
 	padding: 10px;
 }
 input{
@@ -84,4 +66,47 @@ input[type="submit"]{
 	margin-left: 5px;
 	text-decoration: none;
 	color: #01778F;
+}
+.table-principal{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 900px;
+}
+.table{
+	-webkit-box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77);
+	-moz-box-shadow:    9px 7px 5px rgba(50, 50, 50, 0.77);
+	box-shadow:         9px 7px 5px rgba(50, 50, 50, 0.77);
+	width: 100%;
+	height: 100%;
+}
+th{
+	height: 80px;
+}
+td{
+	width: 25%;
+	height: 50px;
+}
+.principal-row{
+	text-align: left;
+}
+
+.th-right{
+	text-align: center;
+}
+.td-right{
+	text-align: center;
+}
+.a{
+	width: 40%;
+	height: 40px;
+	color: #002478;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	transition: 0.5s;
+}
+.button:hover{
+	color: #0070A8;
 }

@@ -2,7 +2,6 @@
 include("../conexao/conexaoBanco.php");
 session_start();
 $ID_Paciente = $_SESSION['id_paciente'];
-
 ?>
 
 
@@ -18,27 +17,30 @@ $ID_Paciente = $_SESSION['id_paciente'];
 </head>
 <body>
     <section class="form">
-        <div class="caixaRegistro">
-           <h2 class="titulo">Consultas marcadas</h2>
-            <div class="formulario"></div>
-                <form method="" class="consultasMarcadas" action="" name="form">
-                    <select class="primeiraLinha" name="selectConsulta">
-                        <?php
-                        $query = "SELECT * from consultas, medicos WHERE codpaciente ='$ID_Paciente' and status = 1 and medico = matricula";
-                        mysqli_set_charset($connection,"utf-8");
-                        if($result=mysqli_query($connection,$query)){
-                            while($dados = mysqli_fetch_assoc($result)){
-                            $dataConsulta=$dados['data'];
-                            $horaConsulta=$dados['hora'];
-                            $medicoConsulta=$dados['nome'];
-                            echo '<option value="">'.$dataConsulta.' - às '.$horaConsulta.' - Médico: Dr(a): '.$medicoConsulta.' </option>';
-                            }
-                        mysqli_free_result($result);
+        <div class="table-principal">
+            <table class="table">
+                <tr class="principal-row">
+                    <th>Especialidade</th>
+                    <th >Médico</th>
+                    <th >Dia</th>
+                    <th >Hora</th>
+                </tr>    
+                <?php
+                    $query = "SELECT * from consultas, medicos WHERE codpaciente ='$ID_Paciente' and status = 1 and medico = matricula";
+                    mysqli_set_charset($connection,"utf-8");
+                    if($result=mysqli_query($connection,$query)){
+                        while($dados = mysqli_fetch_assoc($result)){
+                        $codigoEspecialidade=$dados['espec'];
+                        $dataConsulta=$dados['data'];
+                        $horaConsulta=$dados['hora'];
+                        $medicoConsulta=$dados['nome'];
+                        
+                            echo '<tr><td class="th-left">'.$codigoEspecialidade.'</td><td>'.$medicoConsulta.'</td><td>'.$dataConsulta.'</td><td>'.$horaConsulta.'</td></tr>';
                         }
-                        ?>
-                    </select>
-                </form>
-        </div>
+                        mysqli_free_result($result);
+                    }
+                ?>
+            
     </section>
 </body>
 </html>
