@@ -31,7 +31,8 @@ session_start();
                 echo '<ul>
                 <li><a href="../php/consulta/novaConsulta.php">Cadastrar consulta</a></li>
                 <li><a href="../php/cadastro/cadastrarMedico.php">Cadastrar medico</a></li>
-                <li><a href="../php/cadastro/cadastrarAtendente.php">Cadastrar atendente</a></li>              
+                <li><a href="../php/cadastro/cadastrarAtendente.php">Cadastrar atendente</a></li>  
+                <li><a href="../php/consulta/buscarMedicos.php">Ver consultas</a></li>          
             </ul>';
             }
             ?>
